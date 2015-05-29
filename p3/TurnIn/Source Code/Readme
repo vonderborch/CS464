@@ -1,0 +1,45 @@
+Christian Webber's CptS 464 Project 3
+Implementing a Chandy-Lambert Snapshot Algorithm on a scenario with 4 nodes.
+
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+
+How to run:
+0. Swap in the project (cwebb-proj3)
+1. open 4 terminals, ssh into each node
+1.A) ssh Caesar.cwebb-proj3.WSUCPTS464.isi.deterlab.net
+1.B) ssh Brutus.cwebb-proj3.WSUCPTS464.isi.deterlab.net
+1.C) ssh Operachorus.cwebb-proj3.WSUCPTS464.isi.deterlab.net
+1.D) ssh Pompus.cwebb-proj3.WSUCPTS464.isi.deterlab.net
+
+2. Ensure Ip addresses for a node matches those on the Details screen (they should, but you never know). These can be set in various settings files for each node.
+2.A) Caesar: setcaesar
+2.B) Brutus: setbrutus
+2.C) Operachorus: setoperachorus
+2.D) Pompus: setpompus
+
+3. Run the bash scripts for each node. These will automatically handle installing any prerequisites necessary to run the project.
+3.A) Caesar: ./RunCaesar.sh [SnapshotState]
+3.B) Brutus: ./RunBrutus.sh
+3.C) Operachorus: ./RunOperachorus.sh
+3.D) Pompus: ./RunPompus.sh
+
+4. The snapshot, if one was created, will be exported to a seperate file, cutfile.txt
+
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+
+File Description (alphabetical):
+- Caesar.go: The file that is intended to be ran for Caesar. Essentially controls the whole system.
+- NS.ns: The ns file for the program. Used to setup the experiment on DeterLab
+- Officer.go: The file that is intended to be ran for each general under Caesar. Handles message passing to it and from it, but no particularly special logic on its own part.
+- RunBrutus.sh: The bash script to run the Brutus node
+- RunCaesar.sh: The bash script to run the Caesar node
+- RunOperachorus.sh: The bash script to run the Operachorus node
+- RunPompus.sh: The bash script to run the Pompus node
+- setbrutus: The settings for the Brutus node. Contains the name of the officer and its IP address
+- setcaesar: The settings for the Caesar node. Contains the name of the officer and its IP address
+- setoperachorus: The settings for the Operachorus node. Contains the name of the officer and its IP address
+- setpompus: The settings for the Pompus node. Contains the name of the officer and its IP address

@@ -1,0 +1,8 @@
+const long MSG_LEN=256;
+struct LittleMsg {
+	long messagenumber;
+	string<MSG_LEN> sender;
+	string<MSG_LEN> message;
+};
+
+
